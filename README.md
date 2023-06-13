@@ -1,6 +1,6 @@
 # Проект по автоматизации тестирования API
 <p align="center">
-<a href="https://reqres.in/"><img src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/test/java/images/reqres.jpg"/></a>
+<a href="https://reqres.in/"><img src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/test/resources/logo/reqres.jpg"/></a>
 </p>
 
 ## :card_file_box: Содержание
@@ -13,17 +13,17 @@
 
 ## :bookmark: Технологии и инструменты
 <p align="center">
-<img src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/test/java/images/IDEA.svg" width="50" height="50"  alt="IDEA"/></a>
-<img src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/test/java/images/Java.svg" width="50" height="50"  alt="Java"/></a>
-<img src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/test/java/images/Github.svg" width="50" height="50"  alt="Github"/></a>
-<img src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/test/java/images/JUnit5.svg" width="50" height="50"  alt="JUnit5"/></a>
-<img src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/test/java/images/Gradle.svg" width="50" height="50"  alt="Gradle"/></a>
-<img src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/test/java/images/Selenide.svg" width="50" height="50"  alt="Selenide"/></a>
-<img src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/test/java/images/Allure.svg" width="50" height="50"  alt="Allure"/></a>
-<img src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/test/java/images/Jenkins.svg" width="50" height="50"  alt="Jenkins"/></a>
-<a><img src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/test/java/images/Allure_TO.svg" width="50" height="50"  alt="Allure TestOps"/></a>
-<a><img src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/test/java/images/Telegram.svg" width="50" height="50"  alt="Telegram"/></a>
-<a><img src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/test/java/images/Rest-Assured.svg" width="50" height="50"  alt="Rest-Assured"/></a>
+<img src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/test/resources/logo/IDEA.svg" width="50" height="50"  alt="IDEA"/></a>
+<img src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/test/resources/logo/Java.svg" width="50" height="50"  alt="Java"/></a>
+<img src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/test/resources/logo/Github.svg" width="50" height="50"  alt="Github"/></a>
+<img src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/test/resources/logo/JUnit5.svg" width="50" height="50"  alt="JUnit5"/></a>
+<img src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/test/resources/logo/Gradle.svg" width="50" height="50"  alt="Gradle"/></a>
+<img src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/test/resources/logo/Selenide.svg" width="50" height="50"  alt="Selenide"/></a>
+<img src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/test/resources/logo/Allure.svg" width="50" height="50"  alt="Allure"/></a>
+<img src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/test/resources/logo/Jenkins.svg" width="50" height="50"  alt="Jenkins"/></a>
+<a><img src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/test/resources/logo/Allure_TO.svg" width="50" height="50"  alt="Allure TestOps"/></a>
+<a><img src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/test/resources/logo/Telegram.svg" width="50" height="50"  alt="Telegram"/></a>
+<a><img src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/test/resources/logo/Rest-Assured.svg" width="50" height="50"  alt="Rest-Assured"/></a>
 </p>
 
 ## :bookmark: Запуск тестов из терминала
@@ -32,9 +32,9 @@
 clean
 api_test
 ```
-## :bookmark: <img src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/test/java/images/Jenkins.svg" width="25" height="25"  alt="Jenkins"/></a> Jenkins <a target="_blank" href=" "> job </a> 
+## :bookmark: <img src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/test/resources/logo/Jenkins.svg" width="25" height="25"  alt="Jenkins"/></a> Jenkins <a target="_blank" href=" "> job </a> 
 
-## :bookmark: <img src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/test/java/images/Allure.svg" width="25" height="25"  alt="Allure"/></a> Отчет в <a target="_blank" href=" ">Allure report</a>
+## :bookmark: <img src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/test/resources/logo/Allure.svg" width="25" height="25"  alt="Allure"/></a> Отчет в <a target="_blank" href=" ">Allure report</a>
 
 ### Обзор сборки
 <p align="center">
@@ -51,13 +51,13 @@ api_test
 <img title="Allure Graphs" src=" ">
 </p>
 
-## :bookmark: <img src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/test/java/images/Telegram.svg" width="25" height="25"  alt="Telegram"/></a> Уведомление в Telegram
+## :bookmark: <img src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/test/resources/logo/Telegram.svg" width="25" height="25"  alt="Telegram"/></a> Уведомление в Telegram
 
 <p align="center">
 <img title="Telegram notification" src=" ">
 </p>
 
-## :bookmark: <img src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/test/java/images/Allure_TO.svg" width="25" height="25" alt="Allure TestOps"/></a> Добавление интеграции с Allure TestOps
+## :bookmark: <img src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/test/resources/logo/Allure_TO.svg" width="25" height="25" alt="Allure TestOps"/></a> Добавление интеграции с Allure TestOps
 <a target="_blank" href=" ">Job</a>
 
 ### Allure TestOps dashboard
