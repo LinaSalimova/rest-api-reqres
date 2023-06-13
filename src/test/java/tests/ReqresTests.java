@@ -16,10 +16,7 @@ public class ReqresTests extends TestBase {
    */
     @Test
     void successLogin() {
-        String loginBody = "{\n" +
-                "    \"email\": \"eve.holt@reqres.in\",\n" +
-                "    \"password\": \"cityslicka\"\n" +
-                "}";
+        String loginBody = "{\"email\": \"eve.holt@reqres.in\",\"password\": \"cityslicka\"}";// BAD PRACTICE
 
         given()
                 .log().uri()
@@ -38,10 +35,7 @@ public class ReqresTests extends TestBase {
     @DisplayName("You can create user with success fields name and job")
     @Test
     void successCreateUser() {
-        String userBody = "{\n" +
-                "    \"name\": \"Lina\",\n" +
-                "    \"job\": \"tester\"\n" +
-                "}";
+        String userBody = "{\"name\": \"Lina\",\"job\": \"tester\"}";// BAD PRACTICE
 
         given()
                 .log().uri()
@@ -61,10 +55,7 @@ public class ReqresTests extends TestBase {
     @DisplayName("You can create user with empty fields name and job")
     @Test
     void createUserWithoutData() {
-        String userBodyWithoutData = "{\n" +
-                "    \"name\": \"\",\n" +
-                "    \"job\": \"\"\n" +
-                "}";
+        String userBodyWithoutData = "{\"name\": \"\",\"job\": \"\"}";// BAD PRACTICE
 
         given()
                 .log().uri()
@@ -84,10 +75,7 @@ public class ReqresTests extends TestBase {
     @DisplayName("You can update existing user")
     @Test
     void updateUserData() {
-        String updateUserBody = "{\n" +
-                "    \"name\": \"morpheus\",\n" +
-                "    \"job\": \"zion resident\"\n" +
-                "}";
+        String updateUserBody = "{\"name\": \"morpheus\",\"job\": \"zion resident\"}";// BAD PRACTICE
 
         given()
                 .log().uri()
