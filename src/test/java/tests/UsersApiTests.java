@@ -1,36 +1,14 @@
 package tests;
+
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static io.restassured.RestAssured.*;
+import static io.restassured.RestAssured.given;
 import static io.restassured.http.ContentType.JSON;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.notNullValue;
 
-public class ReqresTests extends TestBase {
-    /*
-  1. Make request (POST) to https://reqres.in/api/login
-      with body { "email": "eve.holt@reqres.in", "password": "cityslicka" }
-  2. Get response { "token": "QpwL5tke4Pnpja7X4" }
-  3. Check token is QpwL5tke4Pnpja7X4
-   */
-    @Test
-    void successLogin() {
-        String loginBody = "{\"email\": \"eve.holt@reqres.in\",\"password\": \"cityslicka\"}";// BAD PRACTICE
-
-        given()
-                .log().uri()
-                .log().body()
-                .contentType(JSON)
-                .body(loginBody)
-                .post("/login")
-                .then()
-                .log().status()
-                .log().body()
-                .statusCode(200)
-                .body("token", is("QpwL5tke4Pnpja7X4"));
-    }
-
+public class UsersApiTests {
 
     @DisplayName("You can create user with success fields name and job")
     @Test
@@ -106,19 +84,4 @@ public class ReqresTests extends TestBase {
                 .statusCode(200)
                 .body("data.first_name", is("Tobias"));
     }
-
-    @DisplayName("You can't get any user via non existing id")
-    @Test
-    void getNotExistedUserById() {
-
-        given()
-                .log().all()
-                .get("/users/0")
-                .then()
-                .log().status()
-                .log().body()
-                .statusCode(404);
-    }
-
-
 }
