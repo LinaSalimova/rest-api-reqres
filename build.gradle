@@ -70,3 +70,23 @@ task api_tests(type: Test) {
         includeTags ("api")
     }
 }
+task user_id(type: Test) {
+    useJUnitPlatform {
+        includeTags("user")
+    }
+}
+task create_user(type: Test) {
+        useJUnitPlatform {
+            includeTags("create")
+        }
+    }
+task empty_fields(type: Test) {
+    useJUnitPlatform {
+        includeTags("empty")
+    }
+}
+task update_user(type: Test) {
+    useJUnitPlatform {
+        includeTags("update")
+    }
+}

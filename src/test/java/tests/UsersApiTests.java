@@ -1,9 +1,12 @@
 package tests;
 
+import io.qameta.allure.Owner;
 import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.RestAssured;
 import models.UserBody;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 
 import static io.qameta.allure.Allure.step;
@@ -14,6 +17,7 @@ import static specs.Specs.*;
 public class UsersApiTests {
 
     @DisplayName("You can create user with success fields name and job")
+    @Tags({@Tag("create"),@Tag("user")})
     @Test
     void successCreateUser() {
         RestAssured.filters(new AllureRestAssured());
@@ -36,6 +40,7 @@ public class UsersApiTests {
     }
 
     @DisplayName("You can create user with empty fields name and job")
+    @Tags({@Tag("empty"),@Tag("fields")})
     @Test
     void createUserWithoutData() {
         RestAssured.filters(new AllureRestAssured());
@@ -57,6 +62,7 @@ public class UsersApiTests {
 }
 
     @DisplayName("You can update existing user")
+    @Tags({@Tag("update"),@Tag("user")})
     @Test
     void updateUserData() {
         RestAssured.filters(new AllureRestAssured());
