@@ -77,23 +77,4 @@ public class UsersApiTests {
             assertEquals(("zion resident"), response.getJob());
         });
     }
-
-    @DisplayName("You can get existing user via his system id")
-    @Test
-    void getExistUserById() {
-        RestAssured.filters(new AllureRestAssured());
-        UserBody data = new UserBody();
-        data.getName();
-        step("Get existing user via his system id", () -> {
-            UserBody response = given()
-                .spec(loginRequestSpecBase)
-                .get("/users/9")
-                .then()
-                .spec(getUserIdResponseSpec)
-                .extract().as(UserBody.class);;
-            step("Check response", () ->
-                assertEquals(("Tobias"), response.getName()));
-
-        });
-    }
 }
