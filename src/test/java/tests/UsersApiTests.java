@@ -1,87 +1,99 @@
 package tests;
 
+import io.qameta.allure.restassured.AllureRestAssured;
+import io.restassured.RestAssured;
+import models.UserBody;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import static io.qameta.allure.Allure.step;
 import static io.restassured.RestAssured.given;
-import static io.restassured.http.ContentType.JSON;
-import static org.hamcrest.Matchers.is;
-import static org.hamcrest.Matchers.notNullValue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static specs.Specs.*;
 
 public class UsersApiTests {
 
     @DisplayName("You can create user with success fields name and job")
     @Test
     void successCreateUser() {
-        String userBody = "{\"name\": \"Lina\",\"job\": \"tester\"}";// BAD PRACTICE
+        RestAssured.filters(new AllureRestAssured());
+        UserBody data = new UserBody();
+        data.setName("Lina");
+        data.setJob("tester");
 
-        given()
-                .log().uri()
-                .log().body()
-                .contentType(JSON)
-                .body(userBody)
+        step("Verify created user data", () -> {
+            UserBody response = given()
+                .spec(loginRequestSpecBase)
+                .body(data)
                 .post("/users")
                 .then()
-                .log().status()
-                .log().body()
-                .statusCode(201)
-                .body("name", is("Lina"))
-                .body("job", is("tester"))
-                .body("id", notNullValue());
+                .spec(createUserResponseSpec)
+                .extract().as(UserBody.class);
+            step("Check response", () ->
+        assertEquals(("Lina"), response.getName()));
+        assertEquals(("tester"), response.getJob());
+        });
     }
 
     @DisplayName("You can create user with empty fields name and job")
     @Test
     void createUserWithoutData() {
-        String userBodyWithoutData = "{\"name\": \"\",\"job\": \"\"}";// BAD PRACTICE
-
-        given()
-                .log().uri()
-                .log().body()
-                .contentType(JSON)
-                .body(userBodyWithoutData)
+        RestAssured.filters(new AllureRestAssured());
+        UserBody data = new UserBody();
+        data.setName(" ");
+        data.setJob(" ");
+        step("Verify created user data", () -> {
+            UserBody response = given()
+                .spec(loginRequestSpecBase)
+                .body(data)
                 .post("/users")
                 .then()
-                .log().status()
-                .log().body()
-                .statusCode(201)
-                .body("name", is(""))
-                .body("job", is(""))
-                .body("id", notNullValue());
-    }
+                .spec(userWithEmptyFieldsResponseSpec)
+                .extract().as(UserBody.class);
+        step("Check response", () ->
+        assertEquals((" "), response.getName()));
+        assertEquals((" "), response.getJob());
+    });
+}
 
     @DisplayName("You can update existing user")
     @Test
     void updateUserData() {
-        String updateUserBody = "{\"name\": \"morpheus\",\"job\": \"zion resident\"}";// BAD PRACTICE
+        RestAssured.filters(new AllureRestAssured());
+        UserBody data = new UserBody();
+        data.setName("morpheus");
+        data.setJob("zion resident");
 
-        given()
-                .log().uri()
-                .log().body()
-                .contentType(JSON)
-                .body(updateUserBody)
+        step("Update existing user", () -> {
+            UserBody response = given()
+                .spec(loginRequestSpecBase)
+                .body(data)
                 .patch("/users/2")
                 .then()
-                .log().status()
-                .log().body()
-                .statusCode(200)
-                .body("name", is("morpheus"))
-                .body("job", is("zion resident"))
-                .body("updatedAt", notNullValue());
+                .spec(updateExistingUserResponseSpec)
+                .extract().as(UserBody.class);
+            step("Check response", () ->
+            assertEquals(("morpheus"), response.getName()));
+            assertEquals(("zion resident"), response.getJob());
+        });
     }
 
     @DisplayName("You can get existing user via his system id")
     @Test
     void getExistUserById() {
-
-        given()
-                .log().uri()
-                .log().body()
+        RestAssured.filters(new AllureRestAssured());
+        UserBody data = new UserBody();
+        data.getName();
+        step("Get existing user via his system id", () -> {
+            UserBody response = given()
+                .spec(loginRequestSpecBase)
                 .get("/users/9")
                 .then()
-                .log().status()
-                .log().body()
-                .statusCode(200)
-                .body("data.first_name", is("Tobias"));
+                .spec(getUserIdResponseSpec)
+                .extract().as(UserBody.class);;
+            step("Check response", () ->
+                assertEquals(("Tobias"), response.getName()));
+
+        });
     }
 }

@@ -10,6 +10,7 @@ import static io.qameta.allure.Allure.step;
 import static io.restassured.RestAssured.*;
 import static io.restassured.http.ContentType.JSON;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static specs.Specs.*;
 
 
 public class AuthApiTests extends TestBase {
@@ -17,24 +18,20 @@ public class AuthApiTests extends TestBase {
     @Owner(value = "Alekseeva Lina")
     @Test
     void successLogin() {
-        step("Verify registration token", () -> {
             RestAssured.filters(new AllureRestAssured());
             Login data = new Login();
             data.setEmail("eve.holt@reqres.in");
             data.setPassword("cityslicka");
-
+        step("Verify registration token", () -> {
             Login.LoginResponse response = given()
-                    .log().uri()
-                    .log().body()
-                    .contentType(JSON)
+                    .spec(loginRequestSpecBase)
                     .body(data)
                     .post("/login")
                     .then()
-                    .log().status()
-                    .log().body()
-                    .statusCode(200)
+                    .spec(loginResponseSpec)
                     .extract().as(Login.LoginResponse.class);
-            assertEquals(("QpwL5tke4Pnpja7X4"), response.getToken());
+            step("Check response", () ->
+            assertEquals(("QpwL5tke4Pnpja7X4"), response.getToken()));
         });
     }
 

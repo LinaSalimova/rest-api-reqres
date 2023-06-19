@@ -10,7 +10,7 @@ public class Login {
 @Data
 public class LoginResponse {
 
-    String id,token;
+    String id, token;
+}
+}
 
-}
-}
