@@ -17,7 +17,7 @@ import static specs.Specs.loginRequestSpecBase;
 
 public class IdApiTests {
     @DisplayName("You can get existing user via his system id")
-    @Tags({@Tag("user"),@Tag("id")})
+    @Tags({@Tag("user"), @Tag("id")})
     @Owner(value = "Alekseeva Lina")
     @Test
     void getExistUserById() {
@@ -30,10 +30,10 @@ public class IdApiTests {
                     .get("/users/9")
                     .then()
                     .spec(getUserIdResponseSpec)
-                    .extract().as(UserBody.class);;
+                    .extract().as(UserBody.class);
             step("Check response", () ->
                     assertEquals(("Tobias"), response.getName()));
-
         });
+
     }
 }

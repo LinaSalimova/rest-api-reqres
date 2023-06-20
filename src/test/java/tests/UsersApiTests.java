@@ -1,6 +1,5 @@
 package tests;
 
-import io.qameta.allure.Owner;
 import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.RestAssured;
 import models.UserBody;
@@ -14,10 +13,10 @@ import static io.restassured.RestAssured.given;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static specs.Specs.*;
 
-public class UsersApiTests {
+public class UsersApiTests extends TestBase {
 
     @DisplayName("You can create user with success fields name and job")
-    @Tags({@Tag("create"),@Tag("user")})
+    @Tags({@Tag("create"), @Tag("user")})
     @Test
     void successCreateUser() {
         RestAssured.filters(new AllureRestAssured());
@@ -27,20 +26,20 @@ public class UsersApiTests {
 
         step("Verify created user data", () -> {
             UserBody response = given()
-                .spec(loginRequestSpecBase)
-                .body(data)
-                .post("/users")
-                .then()
-                .spec(createUserResponseSpec)
-                .extract().as(UserBody.class);
+                    .spec(loginRequestSpecBase)
+                    .body(data)
+                    .post("/users")
+                    .then()
+                    .spec(createUserResponseSpec)
+                    .extract().as(UserBody.class);
             step("Check response", () ->
-        assertEquals(("Lina"), response.getName()));
-        assertEquals(("tester"), response.getJob());
+                    assertEquals(("Lina"), response.getName()));
+            assertEquals(("tester"), response.getJob());
         });
     }
 
     @DisplayName("You can create user with empty fields name and job")
-    @Tags({@Tag("empty"),@Tag("fields")})
+    @Tags({@Tag("empty"), @Tag("fields")})
     @Test
     void createUserWithoutData() {
         RestAssured.filters(new AllureRestAssured());
@@ -49,20 +48,20 @@ public class UsersApiTests {
         data.setJob(" ");
         step("Verify created user data", () -> {
             UserBody response = given()
-                .spec(loginRequestSpecBase)
-                .body(data)
-                .post("/users")
-                .then()
-                .spec(userWithEmptyFieldsResponseSpec)
-                .extract().as(UserBody.class);
-        step("Check response", () ->
-        assertEquals((" "), response.getName()));
-        assertEquals((" "), response.getJob());
-    });
-}
+                    .spec(loginRequestSpecBase)
+                    .body(data)
+                    .post("/users")
+                    .then()
+                    .spec(userWithEmptyFieldsResponseSpec)
+                    .extract().as(UserBody.class);
+            step("Check response", () ->
+                    assertEquals((" "), response.getName()));
+            assertEquals((" "), response.getJob());
+        });
+    }
 
     @DisplayName("You can update existing user")
-    @Tags({@Tag("update"),@Tag("user")})
+    @Tags({@Tag("update"), @Tag("user")})
     @Test
     void updateUserData() {
         RestAssured.filters(new AllureRestAssured());
@@ -72,14 +71,14 @@ public class UsersApiTests {
 
         step("Update existing user", () -> {
             UserBody response = given()
-                .spec(loginRequestSpecBase)
-                .body(data)
-                .patch("/users/2")
-                .then()
-                .spec(updateExistingUserResponseSpec)
-                .extract().as(UserBody.class);
+                    .spec(loginRequestSpecBase)
+                    .body(data)
+                    .patch("/users/2")
+                    .then()
+                    .spec(updateExistingUserResponseSpec)
+                    .extract().as(UserBody.class);
             step("Check response", () ->
-            assertEquals(("morpheus"), response.getName()));
+                    assertEquals(("morpheus"), response.getName()));
             assertEquals(("zion resident"), response.getJob());
         });
     }

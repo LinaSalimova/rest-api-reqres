@@ -57,5 +57,16 @@ public class Specs {
                 .expectStatusCode(200)
                 .expectBody("data.first_name", is("Tobias"))
                 .build();
+        public static ResponseSpecification    massiveResponseSpec = new ResponseSpecBuilder()
+                .log(STATUS)
+                .log(BODY)
+                .expectStatusCode(200)
+                .build();
+        public static ResponseSpecification userIdCheckResponseSpec = new ResponseSpecBuilder()
+                .log(STATUS)
+                .log(BODY)
+                .expectStatusCode(200)
+                .expectBody("data", notNullValue())
+                .build();
 }
 
