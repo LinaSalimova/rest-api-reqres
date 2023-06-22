@@ -21,7 +21,7 @@ dependencies {
             "io.qameta.allure:allure-rest-assured:$allureVersion",
             "org.junit.jupiter:junit-jupiter-api:5.9.1",
             "org.junit.jupiter:junit-jupiter:5.9.1",
-            "io.qameta.allure:allure-selenide:2.17.3",
+            "io.qameta.allure:allure-selenide:$allureVersion",
             "org.assertj:assertj-core:$assertJVersion",
             "org.aeonbits.owner:owner:1.0.12",
             "com.fasterxml.jackson.core:jackson-core:$jacksonVersion",
@@ -29,14 +29,16 @@ dependencies {
     )
 
     allure {
-        report {
-            version.set('2.20.1') // Allure Report (https://github.com/allure-framework/allure2)
-        }
+        version.set("2.21.0")
         adapter {
-            aspectjWeaver.set(true) // обработка аннотации @Step
+            allureJavaVersion.set(allureVersion)
+            aspectjVersion.set("1.9.5")
+            aspectjWeaver.set(true)
+
             frameworks {
                 junit5 {
-                    adapterVersion.set('2.20.1') // Allure JUnit5 (https://github.com/allure-framework/allure-java)
+                    adapterVersion.set(allureVersion)
+                    enabled.set(true)
                 }
             }
         }
@@ -48,13 +50,8 @@ dependencies {
     )
 }
 
-compileJava {
-    options.encoding = 'UTF-8'
-}
-test {
-    useJUnitPlatform {
-        systemProperties(System.getProperties())
-    }
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
 }
 
 tasks.withType(Test) {
@@ -66,4 +63,5 @@ tasks.withType(Test) {
             exceptionFormat "short"
         }
     }
+
 }
