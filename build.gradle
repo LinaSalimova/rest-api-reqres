@@ -21,7 +21,7 @@ dependencies {
             "io.qameta.allure:allure-rest-assured:$allureVersion",
             "org.junit.jupiter:junit-jupiter-api:5.9.1",
             "org.junit.jupiter:junit-jupiter:5.9.1",
-            "io.qameta.allure:allure-selenide:$allureVersion",
+            "io.qameta.allure:allure-selenide:2.17.3",
             "org.assertj:assertj-core:$assertJVersion",
             "org.aeonbits.owner:owner:1.0.12",
             "com.fasterxml.jackson.core:jackson-core:$jacksonVersion",
