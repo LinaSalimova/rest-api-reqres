@@ -24,19 +24,21 @@ public class UsersApiTests extends TestBase {
         data.setName("Lina");
         data.setJob("tester");
 
-        step("Verify created user data", () -> {
-            UserBody response = given()
-                    .spec(loginRequestSpecBase)
-                    .body(data)
-                    .post("/users")
-                    .then()
-                    .spec(createUserResponseSpec)
-                    .extract().as(UserBody.class);
-            step("Check response", () ->
-                    assertEquals(("Lina"), response.getName()));
-            assertEquals(("tester"), response.getJob());
-        });
+
+        UserBody response = step("Verify created user data", () -> given()
+                .spec(loginRequestSpecBase)
+                .body(data)
+                .post("/users")
+                .then()
+                .spec(createUserResponseSpec)
+                .extract().as(UserBody.class));
+        step("Check name in response", () ->
+                assertEquals("Lina", response.getName()));
+
+        step("Check job in response", () ->
+                assertEquals("tester", response.getJob()));
     }
+
 
     @DisplayName("You can create user with empty fields name and job")
     @Tags({@Tag("empty"), @Tag("fields")})
@@ -46,18 +48,17 @@ public class UsersApiTests extends TestBase {
         UserBody data = new UserBody();
         data.setName(" ");
         data.setJob(" ");
-        step("Verify created user data", () -> {
-            UserBody response = given()
+            UserBody response = step("Verify created user data", () ->  given()
                     .spec(loginRequestSpecBase)
                     .body(data)
                     .post("/users")
                     .then()
                     .spec(userWithEmptyFieldsResponseSpec)
-                    .extract().as(UserBody.class);
-            step("Check response", () ->
-                    assertEquals((" "), response.getName()));
-            assertEquals((" "), response.getJob());
-        });
+                    .extract().as(UserBody.class));
+        step("Check name in response", () ->
+            assertEquals((" "), response.getName()));
+        step("Check job in response", () ->
+            assertEquals((" "), response.getJob()));
     }
 
     @DisplayName("You can update existing user")
@@ -69,17 +70,18 @@ public class UsersApiTests extends TestBase {
         data.setName("morpheus");
         data.setJob("zion resident");
 
-        step("Update existing user", () -> {
-            UserBody response = given()
+            UserBody response = step("Update existing user", () ->
+                    given()
                     .spec(loginRequestSpecBase)
                     .body(data)
                     .patch("/users/2")
                     .then()
                     .spec(updateExistingUserResponseSpec)
-                    .extract().as(UserBody.class);
-            step("Check response", () ->
-                    assertEquals(("morpheus"), response.getName()));
-            assertEquals(("zion resident"), response.getJob());
-        });
+                    .extract().as(UserBody.class));
+        step("Check name in response", () ->
+            assertEquals(("morpheus"), response.getName()));
+        step("Check job in response", () ->
+            assertEquals(("zion resident"), response.getJob()));
+
     }
 }

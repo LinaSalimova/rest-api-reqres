@@ -4,6 +4,7 @@ import io.qameta.allure.Owner;
 import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.RestAssured;
 import models.Login;
+import models.LoginResponse;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
@@ -23,17 +24,15 @@ public class AuthApiTests extends TestBase {
         Login data = new Login();
         data.setEmail("eve.holt@reqres.in");
         data.setPassword("cityslicka");
-        step("Verify registration token", () -> {
-            Login.LoginResponse response = given()
-                    .spec(loginRequestSpecBase)
-                    .body(data)
-                    .post("/login")
-                    .then()
-                    .spec(loginResponseSpec)
-                    .extract().as(Login.LoginResponse.class);
-            step("Check response", () ->
-                    assertEquals(("QpwL5tke4Pnpja7X4"), response.getToken()));
-        });
+        LoginResponse response = step("Verify registration token", () ->
+                given()
+                        .spec(loginRequestSpecBase)
+                        .body(data)
+                        .post("/login")
+                        .then()
+                        .spec(loginResponseSpec)
+                        .extract().as(LoginResponse.class));
+        step("Check response", () ->
+                assertEquals(("QpwL5tke4Pnpja7X4"), response.getToken()));
     }
-
 }

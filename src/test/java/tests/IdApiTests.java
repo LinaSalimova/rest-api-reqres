@@ -3,7 +3,9 @@ package tests;
 import io.qameta.allure.Owner;
 import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.RestAssured;
+import models.SingleResourceModel;
 import models.UserBody;
+import models.UserModel;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Tags;
@@ -22,18 +24,20 @@ public class IdApiTests {
     @Test
     void getExistUserById() {
         RestAssured.filters(new AllureRestAssured());
-        UserBody data = new UserBody();
-        data.getName();
-        step("Get existing user via his system id", () -> {
-            UserBody response = given()
-                    .spec(loginRequestSpecBase)
-                    .get("/users/9")
-                    .then()
-                    .spec(getUserIdResponseSpec)
-                    .extract().as(UserBody.class);
-            step("Check response", () ->
-                    assertEquals(("Tobias"), response.getName()));
-        });
+        Integer userId = 9;
+        SingleResourceModel response = step("Get existing user via his system id", () ->
+                given()
+                        .spec(loginRequestSpecBase)
+                        .when()
+                        .get("/user/9")
+                        .then()
+                        .spec(getUserIdResponseSpec)
+                        .extract().as(SingleResourceModel.class));
 
+        step("Check response", () ->
+                assertEquals(userId, response.getData().getId()));
     }
 }
+
+
+

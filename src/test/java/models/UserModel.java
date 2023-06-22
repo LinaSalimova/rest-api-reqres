@@ -7,10 +7,9 @@ import lombok.Data;
 public class UserModel {
 
         Integer id;
-        String email, avatar, name, job;
-        @JsonProperty(value = "first_name")
-        String firstName;
-        @JsonProperty(value = "last_name")
-        String lastName;
-    }
+        String email;
+        String first_name;
+        String last_name;
+        String avatar;
+}
 

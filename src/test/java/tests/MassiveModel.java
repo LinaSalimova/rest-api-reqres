@@ -3,7 +3,6 @@ package tests;
 
 import io.qameta.allure.Owner;
 import models.GetListUsersModel;
-import models.SingleResourceModel;
 import models.UserModel;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
