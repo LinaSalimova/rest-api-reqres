@@ -33,7 +33,7 @@ public class CreatedUserData {
                 given()
                 .spec(loginRequestSpecBase)
                 .body(createdUserData)
-                .post("/user")
+                .post("/users")
                 .then()
                 .spec(createUserResponseSpec)
                 .extract().as(CreateUserResponse.class));
