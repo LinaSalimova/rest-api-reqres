@@ -1,7 +1,8 @@
 package tests;
 
-
 import io.qameta.allure.Owner;
+import io.qameta.allure.restassured.AllureRestAssured;
+import io.restassured.RestAssured;
 import models.GetListUsersModel;
 import models.UserModel;
 import org.junit.jupiter.api.DisplayName;
@@ -26,7 +27,7 @@ public class MassiveModel extends TestBase {
     @Owner(value = "Alekseeva Lina")
     @Test
     void successfulGetListOfUsersIdTest() {
-
+        RestAssured.filters(new AllureRestAssured());
         Integer[] userId = {7, 8, 9, 10, 11, 12};
 
         GetListUsersModel response = step("Make request", () ->

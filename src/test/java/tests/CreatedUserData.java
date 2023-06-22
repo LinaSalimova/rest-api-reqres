@@ -15,7 +15,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static specs.Specs.createUserResponseSpec;
 import static specs.Specs.loginRequestSpecBase;
 
-public class CreatedUserData {
+public class CreatedUserData extends TestBase {
     @DisplayName("You can create user with success fields name and job")
     @Tags({@Tag("create"), @Tag("user")})
     @Test

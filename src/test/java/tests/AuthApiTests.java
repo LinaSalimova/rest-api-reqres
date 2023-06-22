@@ -2,6 +2,7 @@ package tests;
 
 import io.qameta.allure.Owner;
 import io.qameta.allure.restassured.AllureRestAssured;
+
 import io.restassured.RestAssured;
 import models.Login;
 import models.LoginResponse;
@@ -20,6 +21,7 @@ public class AuthApiTests extends TestBase {
     @Owner(value = "Alekseeva Lina")
     @Test
     void successLogin() {
+
         RestAssured.filters(new AllureRestAssured());
         Login data = new Login();
         data.setEmail("eve.holt@reqres.in");
