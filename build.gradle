@@ -64,34 +64,3 @@ tasks.withType(Test) {
         }
     }
 }
-
-task api_tests(type: Test) {
-    useJUnitPlatform {
-        includeTags ("api")
-    }
-}
-task user_id(type: Test) {
-    useJUnitPlatform {
-        includeTags("user")
-    }
-}
-task create_user(type: Test) {
-        useJUnitPlatform {
-            includeTags("create")
-        }
-    }
-task empty_fields(type: Test) {
-    useJUnitPlatform {
-        includeTags("empty")
-    }
-}
-task update_user(type: Test) {
-    useJUnitPlatform {
-        includeTags("update")
-    }
-    task massive_model(type: Test) {
-        useJUnitPlatform {
-            includeTags("massive")
-        }
-    }
-}

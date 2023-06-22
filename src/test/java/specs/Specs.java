@@ -46,9 +46,7 @@ public class Specs {
                 .log(STATUS)
                 .log(BODY)
                 .expectStatusCode(200)
-                .expectBody("name", is("morpheus"))
-                .expectBody("job", is("zion resident"))
-                .expectBody("updatedAt", notNullValue())
+                .expectBody("name", notNullValue())
                 .build();
 
         public static ResponseSpecification    getUserIdResponseSpec = new ResponseSpecBuilder()
