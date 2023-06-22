@@ -4,8 +4,6 @@ import io.qameta.allure.Owner;
 import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.RestAssured;
 import models.SingleResourceModel;
-import models.UserBody;
-import models.UserModel;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Tags;
