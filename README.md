@@ -51,11 +51,6 @@ api_test
 <img title="Allure Graphs" src=" ">
 </p>
 
-## :bookmark: <img src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/test/resources/logo/Telegram.svg" width="25" height="25"  alt="Telegram"/></a> Уведомление в Telegram
-
-<p align="center">
-<img title="Telegram notification" src=" ">
-</p>
 
 ## :bookmark: <img src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/test/resources/logo/Allure_TO.svg" width="25" height="25" alt="Allure TestOps"/></a> Добавление интеграции с Allure TestOps
 <a target="_blank" href=" ">Job</a>
