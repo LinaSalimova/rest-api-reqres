@@ -1,66 +1,58 @@
 plugins {
-    id "java-library"
-    id "io.qameta.allure" version "2.11.2"
-    id "io.freefair.lombok" version "6.5.1"
+    id 'java'
+    id('io.qameta.allure') version '2.11.2'
 }
+
+group 'ru.maruspim'
+version '1.0-SNAPSHOT'
+
+def selenideVersion = "6.13.0",
+    jUnitVersion = "5.9.3",
+    slf4jVersion = "2.0.7",
+    jetbrainsVersion = "23.0.0"
+
+allure {
+    report {
+        version.set('2.20.1') // Allure Report (https://github.com/allure-framework/allure2)
+    }
+    adapter {
+        aspectjWeaver.set(true) // обработка аннотации @Step
+        frameworks {
+            junit5 {
+                adapterVersion.set('2.20.1') // Allure JUnit5 (https://github.com/allure-framework/allure-java)
+            }
+        }
+    }
+}
+
 
 repositories {
     mavenCentral()
 }
-
-def allureVersion = "2.21.0",
-    assertJVersion = "3.24.2",
-    restAssuredVersion = "5.3.0",
-    jacksonVersion = "2.14.0"
-
-
 dependencies {
     testImplementation(
-            "com.codeborne:selenide:6.11.0",
-            "io.rest-assured:rest-assured:$restAssuredVersion",
-            "io.qameta.allure:allure-rest-assured:$allureVersion",
-            "org.junit.jupiter:junit-jupiter-api:5.9.1",
-            "org.junit.jupiter:junit-jupiter:5.9.1",
-            "io.qameta.allure:allure-selenide:2.17.3",
-            "org.assertj:assertj-core:$assertJVersion",
+            "com.codeborne:selenide:$selenideVersion",
+            "org.junit.jupiter:junit-jupiter:$jUnitVersion",
+            "org.slf4j:slf4j-simple:$slf4jVersion",
+            "org.seleniumhq.selenium:selenium-java:3.141.59",
+            "org.junit.jupiter:junit-jupiter-api:5.8.1",
+            "io.github.bonigarcia:webdrivermanager:5.2.1",
             "org.aeonbits.owner:owner:1.0.12",
-            "com.fasterxml.jackson.core:jackson-core:$jacksonVersion",
-            "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion"
+            "org.assertj:assertj-core:3.24.2"
     )
-
-    allure {
-        version.set("2.21.0")
-        adapter {
-            allureJavaVersion.set(allureVersion)
-            aspectjVersion.set("1.9.5")
-            aspectjWeaver.set(true)
-
-            frameworks {
-                junit5 {
-                    adapterVersion.set(allureVersion)
-                    enabled.set(true)
-                }
-            }
-        }
-    }
-
-    testRuntimeOnly(
-            "org.slf4j:slf4j-simple:2.0.5",
-            "org.junit.jupiter:junit-jupiter-engine:5.9.1"
-    )
+    testRuntimeOnly('org.junit.jupiter:junit-jupiter-engine:5.8.1')
 }
 
-tasks.withType(JavaCompile) {
-    options.encoding = "UTF-8"
+compileJava {
+    options.encoding = 'UTF-8'
+}
+test {
+    useJUnitPlatform {
+        systemProperties(System.getProperties())
+    }
 }
 
 tasks.withType(Test) {
-    useJUnitPlatform()
     systemProperties(System.getProperties())
-    testLogging {
-        lifecycle {
-            events "started", "skipped", "failed", "standard_error", "standard_out"
-            exceptionFormat "short"
-        }
-    }
+
 }
