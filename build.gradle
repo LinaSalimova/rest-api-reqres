@@ -21,7 +21,7 @@ dependencies {
             "io.qameta.allure:allure-rest-assured:$allureVersion",
             "org.junit.jupiter:junit-jupiter-api:5.9.1",
             "org.junit.jupiter:junit-jupiter:5.9.1",
-            "io.qameta.allure:allure-selenide:2.17.3",
+            "io.qameta.allure:allure-selenide:$allureVersion",
             "org.assertj:assertj-core:$assertJVersion",
             "org.aeonbits.owner:owner:1.0.12",
             "com.fasterxml.jackson.core:jackson-core:$jacksonVersion",
@@ -43,9 +43,6 @@ dependencies {
             }
         }
     }
-    repositories {
-        mavenCentral()
-    }
 
     testRuntimeOnly(
             "org.slf4j:slf4j-simple:2.0.5",
@@ -64,6 +61,32 @@ tasks.withType(Test) {
         lifecycle {
             events "started", "skipped", "failed", "standard_error", "standard_out"
             exceptionFormat "short"
+        }
+    }
+}
+
+task api_tests(type: Test) {
+    useJUnitPlatform {
+        includeTags ("api")
+    }
+}
+task user_id(type: Test) {
+    useJUnitPlatform {
+        includeTags("user")
+    }
+}
+task create_user(type: Test) {
+        useJUnitPlatform {
+            includeTags("create")
+        }
+    }
+task update_user(type: Test) {
+    useJUnitPlatform {
+        includeTags("update")
+    }
+task massive_model(type: Test) {
+        useJUnitPlatform {
+            includeTags("massive")
         }
     }
 }
