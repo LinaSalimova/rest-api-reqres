@@ -29,16 +29,14 @@ dependencies {
     )
 
     allure {
-        version.set("2.21.0")
+        report {
+            version.set('2.20.1') // Allure Report (https://github.com/allure-framework/allure2)
+        }
         adapter {
-            allureJavaVersion.set(allureVersion)
-            aspectjVersion.set("1.9.5")
-            aspectjWeaver.set(true)
-
+            aspectjWeaver.set(true) // обработка аннотации @Step
             frameworks {
                 junit5 {
-                    adapterVersion.set(allureVersion)
-                    enabled.set(true)
+                    adapterVersion.set('2.20.1') // Allure JUnit5 (https://github.com/allure-framework/allure-java)
                 }
             }
         }
@@ -50,8 +48,13 @@ dependencies {
     )
 }
 
-tasks.withType(JavaCompile) {
-    options.encoding = "UTF-8"
+compileJava {
+    options.encoding = 'UTF-8'
+}
+test {
+    useJUnitPlatform {
+        systemProperties(System.getProperties())
+    }
 }
 
 tasks.withType(Test) {
