@@ -4,6 +4,7 @@ import io.qameta.allure.Owner;
 import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.RestAssured;
 import models.SingleResourceModel;
+import models.UserModel;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Tags;
@@ -22,10 +23,12 @@ public class IdApiTests {
     @Test
     void getExistUserById() {
         RestAssured.filters(new AllureRestAssured());
+        UserModel data= new UserModel();
         Integer userId = 9;
         SingleResourceModel response = step("Get existing user via his system id", () ->
                 given()
                         .spec(loginRequestSpecBase)
+                        .body(data)
                         .when()
                         .get("/user/9")
                         .then()

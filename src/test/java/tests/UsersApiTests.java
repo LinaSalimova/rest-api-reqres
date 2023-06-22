@@ -2,7 +2,7 @@ package tests;
 
 import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.RestAssured;
-import models.UserBody;
+
 import models.UserUpdate;
 import models.UserUpdateResponse;
 import org.junit.jupiter.api.DisplayName;
