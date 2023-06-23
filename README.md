@@ -32,9 +32,9 @@
 clean
 api_test
 ```
-## :bookmark: <img src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/test/resources/logo/Jenkins.svg" width="25" height="25"  alt="Jenkins"/></a> Jenkins <a target="_blank" href=" "> job </a> 
+## :bookmark: <img src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/test/resources/logo/Jenkins.svg" width="25" height="25"  alt="Jenkins"/></a> Jenkins <a target="_blank" href="https://jenkins.autotests.cloud/job/rest-api-reqres/"> job </a> 
 
-## :bookmark: <img src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/test/resources/logo/Allure.svg" width="25" height="25"  alt="Allure"/></a> Отчет в <a target="_blank" href=" ">Allure report</a>
+## :bookmark: <img src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/test/resources/logo/Allure.svg" width="25" height="25"  alt="Allure"/></a> Отчет в <a target="_blank" href="https://jenkins.autotests.cloud/job/rest-api-reqres/allure/">Allure report</a>
 
 ### Обзор сборки
 <p align="center">
@@ -53,7 +53,7 @@ api_test
 
 
 ## :bookmark: <img src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/test/resources/logo/Allure_TO.svg" width="25" height="25" alt="Allure TestOps"/></a> Добавление интеграции с Allure TestOps
-<a target="_blank" href=" ">Job</a>
+<a target="_blank" href="https://jenkins.autotests.cloud/job/rest-api-reqres/">Job</a>
 
 ### Allure TestOps dashboard
 <p align="center">
