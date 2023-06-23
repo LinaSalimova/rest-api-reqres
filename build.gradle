@@ -70,11 +70,6 @@ task api_tests(type: Test) {
         includeTags ("api")
     }
 }
-task user_id(type: Test) {
-    useJUnitPlatform {
-        includeTags("user")
-    }
-}
 task create_user(type: Test) {
         useJUnitPlatform {
             includeTags("create")
