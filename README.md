@@ -51,11 +51,3 @@ api_test
 <img title="Allure Graphs" src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/test/resources/screens/graphs.jpg">
 </p>
 
-
-## :bookmark: <img src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/test/resources/logo/Allure_TO.svg" width="25" height="25" alt="Allure TestOps"/></a> Добавление интеграции с Allure TestOps
-<a target="_blank" href="https://jenkins.autotests.cloud/job/rest-api-reqres/">Job</a>
-
-### Allure TestOps dashboard
-<p align="center">
-  <img title="Allure TestOps overview" src=" ">
-</p>
