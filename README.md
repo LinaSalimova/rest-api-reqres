@@ -38,17 +38,17 @@ api_test
 
 ### Обзор сборки
 <p align="center">
-<img title="Allure Overview Dashboard" src="">
+<img title="Allure Overview Dashboard" src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/test/resources/screens/overview.jpg">
 </p>
 
 ### Тесты
 <p align="center">
-<img title="Allure Suites" src=" ">
+<img title="Allure Suites" src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/test/resources/screens/tests.jpg">
 </p>
 
 ### :bar_chart: Графики
 <p align="center">
-<img title="Allure Graphs" src=" ">
+<img title="Allure Graphs" src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/test/resources/screens/graphs.jpg">
 </p>
 
 
