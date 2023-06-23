@@ -8,8 +8,6 @@
 - [Запуск из терминала](#bookmark-запуск-тестов-из-терминала)
 - [Сборка в Jenkins](#bookmark--jenkins--job-)
 - [Allure отчет](#bookmark--отчет-в-allure-report)
-- [Уведомление в Telegram](#bookmark--уведомление-в-telegram)
-- [Allure TestOps](#bookmark--добавление-интеграции-с-allure-testops)
 
 ## :bookmark: Технологии и инструменты
 <p align="center">
