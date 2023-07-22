@@ -8,6 +8,8 @@
 - [Запуск из терминала](#bookmark-запуск-тестов-из-терминала)
 - [Сборка в Jenkins](#bookmark--jenkins--job-)
 - [Allure отчет](#bookmark--отчет-в-allure-report)
+- [Интеграция с Allure TestOps](#-интеграция-с-allure-testops)
+- [Уведомления в Telegram](#-уведомления-в-telegram)
 
 ## :bookmark: Технологии и инструменты
 <p align="center">
@@ -27,10 +29,10 @@
 ## :bookmark: Запуск тестов из терминала
 Удаленный запуск:
 ```
-clean
-api_test
+./ gradlew clean test
 ```
 ## :bookmark: <img src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/test/resources/logo/Jenkins.svg" width="25" height="25"  alt="Jenkins"/></a> Jenkins <a target="_blank" href="https://jenkins.autotests.cloud/job/rest-api-reqres/"> job </a> 
+<a><img src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/test/resources/screens/job.png"/></a>
 
 ## :bookmark: <img src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/test/resources/logo/Allure.svg" width="25" height="25"  alt="Allure"/></a> Отчет в <a target="_blank" href="https://jenkins.autotests.cloud/job/rest-api-reqres/allure/">Allure report</a>
 
@@ -49,3 +51,13 @@ api_test
 <img title="Allure Graphs" src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/test/resources/screens/graphs.jpg">
 </p>
 
+## <img width="4%" style="vertical-align:middle" title="Allure TestOps" src="https://plugins.jetbrains.com/files/12513/281379/icon/pluginIcon.svg"  width="25" height="25"> [Интеграция с Allure TestOps](https://allure.autotests.cloud/project/3421/dashboards)
+На вкладке Dashboards отображается:
+- Количество тест-кейсов и их статус
+- Соотношение ручных/автоматизированных тестов
+<p align="center">
+<img title="Allure TestOps DashBoard" src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/test/resources/screens/testops.png">
+</p>
+<p align="center">
+<img title="Allure TestOps test-cases" src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/test/resources/screens/suites.png">
+</p>
