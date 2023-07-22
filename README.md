@@ -8,8 +8,6 @@
 - [Запуск из терминала](#bookmark-запуск-тестов-из-терминала)
 - [Сборка в Jenkins](#bookmark--jenkins--job-)
 - [Allure отчет](#bookmark--отчет-в-allure-report)
-- [Уведомление в Telegram](#bookmark--уведомление-в-telegram)
-- [Allure TestOps](#bookmark--добавление-интеграции-с-allure-testops)
 
 ## :bookmark: Технологии и инструменты
 <p align="center">
@@ -38,24 +36,16 @@ api_test
 
 ### Обзор сборки
 <p align="center">
-<img title="Allure Overview Dashboard" src="">
+<img title="Allure Overview Dashboard" src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/test/resources/screens/overview.jpg">
 </p>
 
 ### Тесты
 <p align="center">
-<img title="Allure Suites" src=" ">
+<img title="Allure Suites" src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/test/resources/screens/tests.jpg">
 </p>
 
 ### :bar_chart: Графики
 <p align="center">
-<img title="Allure Graphs" src=" ">
+<img title="Allure Graphs" src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/test/resources/screens/graphs.jpg">
 </p>
 
-
-## :bookmark: <img src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/test/resources/logo/Allure_TO.svg" width="25" height="25" alt="Allure TestOps"/></a> Добавление интеграции с Allure TestOps
-<a target="_blank" href="https://jenkins.autotests.cloud/job/rest-api-reqres/">Job</a>
-
-### Allure TestOps dashboard
-<p align="center">
-  <img title="Allure TestOps overview" src=" ">
-</p>
