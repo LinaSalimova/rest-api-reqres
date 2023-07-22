@@ -1,0 +1,17 @@
+{
+  "base": {
+    "logo": "",
+    "project": "reqres.in",
+    "environment": "qa.guru",
+    "comment": "API Autotests for https://reqres.in",
+    "reportLink": "https://jenkins.autotests.cloud",
+    "language": "en",
+    "allureFolder": "allure-report/",
+    "enableChart": true
+  },
+  "telegram": {
+    "token": "6281383727:AAGkfPDAj6OGTn4c4i89QojBBnrxp6Ub6qQ",
+    "chat": "-865149225",
+    "replyTo": ""
+  }
+}
