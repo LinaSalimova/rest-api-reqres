@@ -70,9 +70,8 @@
 <img title="Allure TestOps test-cases" src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/screens/suites.png">
 </p>
 
-### <img width="4%" style="vertical-align:middle" title="Telegram" src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/logo/Telegram.svg"> Уведомления в Telegram
-После завершения сборки, бот, созданный в <code>Telegram</code>, автоматически обрабатывает и отправляет сообщение с результатом.
-<p align="center">
-<img title="Telegram" src=" ">
-</p>
+### Уведомления в Telegram
+## <img width="4%" style="vertical-align:middle" title="Telegram" src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/logo/Telegram.svg"  width="25" height="25"> 
+</p>  После завершения сборки, бот, созданный в <code>Telegram</code>, автоматически обрабатывает и отправляет сообщение с результатом.
+
 
