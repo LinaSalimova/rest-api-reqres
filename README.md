@@ -59,18 +59,19 @@
 <img title="Allure Graphs" src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/screens/graphs.jpg">
 </p>
 
-## <img width="4%" style="vertical-align:middle" title="Allure TestOps" src="https://plugins.jetbrains.com/files/12513/281379/icon/pluginIcon.svg"  width="25" height="25"> [Интеграция с Allure TestOps](https://allure.autotests.cloud/project/3421/dashboards)
+## <img width="4%" style="vertical-align:middle" title="Allure TestOps" src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/logo/Allure_TO.svg"  width="25" height="25"> [Интеграция с Allure TestOps](https://allure.autotests.cloud/project/3421/dashboards)
 На вкладке Dashboards отображается:
 - Количество тест-кейсов и их статус
 - Соотношение ручных/автоматизированных тестов
 <p align="center">
-<img title="Allure TestOps DashBoard" src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/test/resources/screens/testops.png">
+<img title="Allure TestOps DashBoard" src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/screens/testops.png">
 </p>
 <p align="center">
-<img title="Allure TestOps test-cases" src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/test/resources/screens/suites.png">
+<img title="Allure TestOps test-cases" src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/screens/suites.png">
 </p>
-### <img width="4%" style="vertical-align:middle" title="Telegram" src="media/logo/Telegram.svg"> Уведомления в Telegram
+### <img width="4%" style="vertical-align:middle" title="Telegram" src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/logo/Telegram.svg"> Уведомления в Telegram
 После завершения сборки, бот, созданный в <code>Telegram</code>, автоматически обрабатывает и отправляет сообщение с результатом.
 <p align="center">
 <img title="Allure TestOps DashBoard" src=" ">
 </p>
+
