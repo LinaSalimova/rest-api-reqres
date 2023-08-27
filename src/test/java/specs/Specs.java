@@ -16,9 +16,7 @@ public class Specs {
             .log().uri()
             .log().body()
             .filter(withCustomTemplates())
-            .contentType(JSON)
-            .baseUri("https://reqres.in")
-            .basePath("/api");
+            .contentType(JSON);
     public static ResponseSpecification loginResponseSpec = new ResponseSpecBuilder()
             .log(STATUS)
             .log(BODY)
