@@ -5,10 +5,8 @@ import lombok.Data;
 
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class CreateUserResponse {
+public class CreateUserBody {
 
     private String name;
     private String job;
-    private String id;
-    private String createdAt;
 }

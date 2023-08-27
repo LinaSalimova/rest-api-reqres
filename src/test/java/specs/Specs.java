@@ -46,5 +46,22 @@ public class Specs {
             .expectStatusCode(200)
             .expectBody("data", notNullValue())
             .build();
+    public static ResponseSpecification response404Spec = new ResponseSpecBuilder()
+            .log(STATUS)
+            .log(BODY)
+            .expectStatusCode(404)
+            .build();
+    public static RequestSpecification requestSpec = with()
+            .log().uri()
+            .log().body()
+            .filter(withCustomTemplates())
+            .contentType(JSON)
+            .baseUri("https://reqres.in")
+            .basePath("/api");
+    public static ResponseSpecification response201Spec = new ResponseSpecBuilder()
+            .log(STATUS)
+            .log(BODY)
+            .expectStatusCode(201)
+            .build();
 }
 

@@ -1,8 +1,7 @@
 package tests;
 
 import io.qameta.allure.Owner;
-import io.qameta.allure.restassured.AllureRestAssured;
-import io.restassured.RestAssured;
+
 import models.GetListUsersModel;
 import models.UserModel;
 import org.junit.jupiter.api.DisplayName;
@@ -21,13 +20,12 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import static specs.Specs.loginRequestSpecBase;
 import static specs.Specs.userIdCheckResponseSpec;
 
-public class MassiveModel extends TestBase {
+public class GetListUsersIdTest extends TestBase {
     @DisplayName("Model for object with array")
     @Tags({@Tag("massive"), @Tag("model")})
     @Owner(value = "Alekseeva Lina")
     @Test
     void successfulGetListOfUsersIdTest() {
-        RestAssured.filters(new AllureRestAssured());
         Integer[] userId = {7, 8, 9, 10, 11, 12};
 
         GetListUsersModel response = step("Make request", () ->

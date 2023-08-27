@@ -1,9 +1,7 @@
 package tests;
 
 import io.qameta.allure.Owner;
-import io.qameta.allure.restassured.AllureRestAssured;
 
-import io.restassured.RestAssured;
 import models.Login;
 import models.LoginResponse;
 import org.junit.jupiter.api.Tag;
@@ -16,13 +14,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static specs.Specs.*;
 
 
-public class AuthApiTests extends TestBase {
+public class AuthApiTest extends TestBase {
     @Tags({@Tag("api"), @Tag("auth")})
     @Owner(value = "Alekseeva Lina")
     @Test
     void successLogin() {
 
-        RestAssured.filters(new AllureRestAssured());
         Login data = new Login();
         data.setEmail("eve.holt@reqres.in");
         data.setPassword("cityslicka");

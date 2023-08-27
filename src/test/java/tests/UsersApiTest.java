@@ -1,7 +1,5 @@
 package tests;
 
-import io.qameta.allure.restassured.AllureRestAssured;
-import io.restassured.RestAssured;
 
 import models.UserUpdate;
 import models.UserUpdateResponse;
@@ -15,7 +13,7 @@ import static io.restassured.RestAssured.given;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static specs.Specs.*;
 
-public class UsersApiTests extends TestBase {
+public class UsersApiTest extends TestBase {
     String userName = "morpheus";
     String userJob = "zion resident";
 
@@ -24,24 +22,23 @@ public class UsersApiTests extends TestBase {
     @Tags({@Tag("update"), @Tag("user")})
     @Test
     void updateUserData() {
-        RestAssured.filters(new AllureRestAssured());
         UserUpdate requestBody = new UserUpdate();
         requestBody.setName(userName);
         requestBody.setJob(userJob);
 
         UserUpdateResponse response = step("Update existing user", () ->
-                    given()
-                    .spec(loginRequestSpecBase)
-                    .body(requestBody)
-                    .when()
-                    .put("/users/2")
-                    .then()
-                    .spec(updateExistingUserResponseSpec)
-                    .extract().as(UserUpdateResponse.class));
+                given()
+                        .spec(loginRequestSpecBase)
+                        .body(requestBody)
+                        .when()
+                        .put("/users/2")
+                        .then()
+                        .spec(updateExistingUserResponseSpec)
+                        .extract().as(UserUpdateResponse.class));
         step("Check name in response", () ->
-            assertEquals(userName, response.getName()));
+                assertEquals(userName, response.getName()));
         step("Check job in response", () ->
-            assertEquals(userJob, response.getJob()));
+                assertEquals(userJob, response.getJob()));
 
     }
 }
