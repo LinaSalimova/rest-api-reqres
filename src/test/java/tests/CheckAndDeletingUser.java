@@ -3,6 +3,8 @@ package tests;
 import models.CreateUserBody;
 import models.CreateUserResponse;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 
 import static io.qameta.allure.Allure.step;
@@ -11,9 +13,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static specs.Specs.*;
 import static specs.Specs.response204Spec;
 
-public class CheckAndDelateUser {
+public class CheckAndDeletingUser {
 
     @Test
+    @Tags({@Tag("check"), @Tag("user")})
     @DisplayName("Check user creation")
     void createUserTest() {
         String userName = "Lina";
@@ -37,7 +40,7 @@ public class CheckAndDelateUser {
         step("Check user ID in response", () ->
                 assertThat(response.getId()).isNotNull());
     }
-
+    @Tags({@Tag("deleting"), @Tag("user")})
     @Test
     @DisplayName("Deleting a user")
     void testDeleteUser() {

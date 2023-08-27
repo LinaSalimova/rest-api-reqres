@@ -2,6 +2,8 @@ package tests;
 
 import models.BadRequestResponse;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -14,6 +16,7 @@ import static specs.Specs.requestSpec;
 import static specs.Specs.response404Spec;
 
 public class UnknownRequestTest {
+    @Tags({@Tag("unknown"), @Tag("user")})
     @Test
     @DisplayName("Checking for sending an unknown request")
     void unknownRequestTest() {
