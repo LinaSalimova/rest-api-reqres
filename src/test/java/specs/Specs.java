@@ -16,7 +16,9 @@ public class Specs {
             .log().uri()
             .log().body()
             .filter(withCustomTemplates())
-            .contentType(JSON);
+            .contentType(JSON)
+            .baseUri("https://reqres.in")
+            .basePath("/api");
     public static ResponseSpecification loginResponseSpec = new ResponseSpecBuilder()
             .log(STATUS)
             .log(BODY)
@@ -66,6 +68,12 @@ public class Specs {
             .log(STATUS)
             .log(BODY)
             .expectStatusCode(204)
+            .build();
+
+    public static ResponseSpecification response200Spec = new ResponseSpecBuilder()
+            .log(STATUS)
+            .log(BODY)
+            .expectStatusCode(200)
             .build();
 }
 

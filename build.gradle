@@ -21,7 +21,8 @@ dependencies {
             "org.junit.jupiter:junit-jupiter:5.9.1",
             "org.aeonbits.owner:owner:1.0.12",
             "com.fasterxml.jackson.core:jackson-core:$jacksonVersion",
-            "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion"
+            "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion",
+            "io.rest-assured:json-schema-validator:$restAssuredVersion",
     )
 
     allure {
