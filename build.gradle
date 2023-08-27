@@ -61,23 +61,3 @@ tasks.withType(Test) {
     }
 }
 
-task api_tests(type: Test) {
-    useJUnitPlatform {
-        includeTags ("api")
-    }
-}
-task create_user(type: Test) {
-        useJUnitPlatform {
-            includeTags("create")
-        }
-    }
-task update_user(type: Test) {
-    useJUnitPlatform {
-        includeTags("update")
-    }
-task massive_model(type: Test) {
-        useJUnitPlatform {
-            includeTags("massive")
-        }
-    }
-}
