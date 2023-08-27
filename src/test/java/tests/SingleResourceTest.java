@@ -13,7 +13,7 @@ import static specs.Specs.response200Spec;
 
 public class SingleResourceTest {
     @Test
-    @DisplayName("Получение данных о ресурсе")
+    @DisplayName("Getting data about a resource")
     void testSingleResource() {
         ResourceModel response = step("Make request", () ->
                 given()
