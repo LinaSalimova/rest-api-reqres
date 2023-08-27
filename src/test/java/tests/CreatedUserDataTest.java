@@ -67,5 +67,16 @@ public class CreatedUserDataTest extends TestBase {
                 assertThat(response.getId()).isNotNull());
     }
 
+    @Test
+    @DisplayName("Deleting a user")
+    void testDeleteUser() {
+        step("Make request", () ->
+                given()
+                        .spec(loginRequestSpecBase)
+                        .when()
+                        .delete("/users/2")
+                        .then()
+                        .spec(response204Spec));
+    }
 
 }

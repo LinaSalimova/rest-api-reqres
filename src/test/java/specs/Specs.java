@@ -63,5 +63,10 @@ public class Specs {
             .log(BODY)
             .expectStatusCode(201)
             .build();
+    public static ResponseSpecification response204Spec = new ResponseSpecBuilder()
+            .log(STATUS)
+            .log(BODY)
+            .expectStatusCode(204)
+            .build();
 }
 
