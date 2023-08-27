@@ -13,7 +13,7 @@ import static io.restassured.RestAssured.given;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static specs.Specs.*;
 
-public class UsersApiTest extends TestBase {
+public class UserApiTest extends TestBase {
     String userName = "morpheus";
     String userJob = "zion resident";
 

@@ -24,7 +24,7 @@ public class AuthApiTest extends TestBase {
 
         Login data = new Login();
         data.setEmail("eve.holt@reqres.in");
-        data.setPassword("cityslicka");
+        data.setPassword("cityscapes");
         LoginResponse response = step("Verify registration token", () ->
                 given()
                         .spec(loginRequestSpecBase)
