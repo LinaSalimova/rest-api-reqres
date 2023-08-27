@@ -26,6 +26,14 @@
 <a><img src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/test/resources/logo/Rest-Assured.svg" width="50" height="50"  alt="Rest-Assured"/></a>
 </p>
 
+## :heavy_check_mark: Реализованные проверки
+- Получение списка пользователей
+- Создание пользователя
+- Удаление пользователя
+- Получение данных о несуществующем пользователе
+- Редактирование данных пользователя
+- Получение данных о ресурсе
+
 ## :bookmark: Запуск тестов из терминала
 Удаленный запуск:
 ```
@@ -60,4 +68,9 @@
 </p>
 <p align="center">
 <img title="Allure TestOps test-cases" src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/test/resources/screens/suites.png">
+</p>
+### <img width="4%" style="vertical-align:middle" title="Telegram" src="media/logo/Telegram.svg"> Уведомления в Telegram
+После завершения сборки, бот, созданный в <code>Telegram</code>, автоматически обрабатывает и отправляет сообщение с результатом.
+<p align="center">
+<img title="Allure TestOps DashBoard" src=" ">
 </p>
