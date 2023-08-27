@@ -40,23 +40,23 @@
 ./ gradlew clean test
 ```
 ## :bookmark: <img src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/logo/Jenkins.svg" width="25" height="25"  alt="Jenkins"/></a> Jenkins <a target="_blank" href="https://jenkins.autotests.cloud/job/rest-api-reqres/"> job </a> 
-<a><img src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/test/resources/screens/job.png"/></a>
+<a><img src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/screens/job.png"/></a>
 
 ## :bookmark: <img src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/logo/Allure.svg" width="25" height="25"  alt="Allure"/></a> Отчет в <a target="_blank" href="https://jenkins.autotests.cloud/job/rest-api-reqres/allure/">Allure report</a>
 
 ### Обзор сборки
 <p align="center">
-<img title="Allure Overview Dashboard" src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/test/resources/screens/overview.jpg">
+<img title="Allure Overview Dashboard" src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/screens/overview.jpg">
 </p>
 
 ### Тесты
 <p align="center">
-<img title="Allure Suites" src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/test/resources/screens/tests.jpg">
+<img title="Allure Suites" src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/screens/tests.jpg">
 </p>
 
 ### :bar_chart: Графики
 <p align="center">
-<img title="Allure Graphs" src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/test/resources/screens/graphs.jpg">
+<img title="Allure Graphs" src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/screens/graphs.jpg">
 </p>
 
 ## <img width="4%" style="vertical-align:middle" title="Allure TestOps" src="https://plugins.jetbrains.com/files/12513/281379/icon/pluginIcon.svg"  width="25" height="25"> [Интеграция с Allure TestOps](https://allure.autotests.cloud/project/3421/dashboards)
