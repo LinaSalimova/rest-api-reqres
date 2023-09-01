@@ -66,8 +66,6 @@
 <p align="center">
 <img title="Allure TestOps DashBoard" src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/screens/testops.png">
 </p>
-## :bookmark: <img src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/logo/Jenkins.svg" width="25" height="25"  alt="Jenkins"/></a> Jenkins <a target="_blank" href="https://jenkins.autotests.cloud/job/rest-api-reqres/"> job </a> 
-<a><img src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/screens/job.png"/></a>
 
 ## :bookmark: <img src="https://github.com/LinaAlekseeva/rest-api-reqres/blob/main/src/logo/Telegram.svg" width="25" height="25"  alt="Telegram"/></a> Уведомления в Telegram <a target="_blank" >
 </p>  После завершения сборки, бот, созданный в <code>Telegram</code>, автоматически обрабатывает и отправляет сообщение с результатом.
